@@ -1,9 +1,6 @@
-from utils.api_client import ApiClient
-
-
 class AstralObjectsActions:
-    def __init__(self):
-        self.api_client = ApiClient()
+    def __init__(self, api_client):
+        self.api_client = api_client
 
     def create_polyanet(self, row, column):
         params = {
@@ -21,3 +18,12 @@ class AstralObjectsActions:
         }
 
         return self.api_client.handle_post_api_call('soloons', params)
+
+    def create_comeths(self, row, column, direction):
+        params = {
+            'row': row,
+            'column': column,
+            'direction': direction
+        }
+
+        return self.api_client.handle_post_api_call('comeths', params)

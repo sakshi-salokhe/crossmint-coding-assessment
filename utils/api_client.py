@@ -29,11 +29,11 @@ class ApiClient:
             print(f'Delete call for {url_suffix} failed with error: {str(error)}')
             raise error
 
-    def handle_get_api_call(self):
+    def get_goal_map(self):
         try:
             get_goal_map_url = f"{self.base_api_url}/map/{self.candidate_id}/goal"
             goal_map_response = requests.get(get_goal_map_url)
-            return goal_map_response.json()['goal']
+            return goal_map_response.json().get('goal')
         except requests.exceptions as error:
             print(f'Get call for get_goal_map failed with error: {str(error)}')
             raise error
