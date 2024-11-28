@@ -10,6 +10,8 @@ class ApiClient:
         self.candidate_id = retrieve_value_from_env("CANDIDATE_ID")
 
     def handle_post_api_call(self, url_suffix, params):
+        params['candidateId'] = self.candidate_id
+
         post_url = f"{self.base_api_url}/{url_suffix}"
         try:
             response = requests.post(post_url, json=params)
@@ -19,6 +21,8 @@ class ApiClient:
             raise error
 
     def handle_delete_api_call(self, url_suffix, params):
+        params['candidateId'] = self.candidate_id
+        
         delete_url = f"{self.base_api_url}/{url_suffix}"
         headers = {'content-type': 'application/json'}
 

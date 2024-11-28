@@ -1,7 +1,7 @@
 import time
 
 
-class CreatemegaverseClient:
+class CreateMegaverseClient:
     def __init__(self, api_client, goal_map):
         self.api_client = api_client
         self.goal_map = goal_map
@@ -34,4 +34,4 @@ class CreatemegaverseClient:
                         self.api_client.handle_post_api_call('comeths', params)
                     time.sleep(1)
 
-        return result_megaverse
+        print("Matches goal: ", result_megaverse == self.goal_map)
