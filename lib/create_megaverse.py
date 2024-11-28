@@ -26,11 +26,11 @@ class CreateMegaverseClient:
                     }
                     if current_cell_value == 'POLYANET':
                         self.api_client.handle_post_api_call('polyanets', params)
-                    elif current_cell_value == 'SOLOON':
-                        params['color'] = 'color'  # TODO: Phase 2
+                    elif 'SOLOON' in current_cell_value:
+                        params['color'] = current_cell_value.split('_')[0].lower()
                         self.api_client.handle_post_api_call('soloons', params)
-                    elif current_cell_value == 'COMETH':
-                        params['direction'] = 'direction'  # TODO: Phase 2
+                    elif 'COMETH' in current_cell_value:
+                        params['direction'] = current_cell_value.split('_')[0].lower()
                         self.api_client.handle_post_api_call('comeths', params)
                     time.sleep(1)
 
