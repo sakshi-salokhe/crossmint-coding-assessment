@@ -12,7 +12,7 @@ To install all requirements at once, run this command: `pip3 install requirement
   Paste correct values in the `.env` file for each variable.
 
 - To create megaverse, run the following command:
-  `python3 main.py create`
+  `python3 main.py create` OR simply `python3 main.py`
 
 - To delete an accidentally created object:
   `python3 main.py <object_url_suffix> <row_value> <column_value>` <br/>

@@ -30,12 +30,12 @@ if __name__ == "__main__":
 
     arguments = sys.argv
 
-    action = arguments[1]
+    action = 'create' if arguments is not None else arguments[1]
 
     if len(arguments) == 5 and action == 'delete':
-        delete_url_suffix = sys.argv[2]
-        delete_row = sys.argv[3]
-        delete_column = sys.argv[4]
+        delete_url_suffix = arguments[2]
+        delete_row = arguments[3]
+        delete_column = arguments[4]
 
         params = {
             'row': delete_row,
