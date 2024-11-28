@@ -1,4 +1,4 @@
-from lib.create_metaverse import CreateMetaverseClient
+from lib.create_megaverse import CreatemegaverseClient
 from utils.api_client import ApiClient
 
 
@@ -8,12 +8,10 @@ def main():
     goal_map = api_client.get_goal_map()
 
     if goal_map is not None:
-        create_metaverse_client = CreateMetaverseClient(api_client, goal_map)
-        return create_metaverse_client.create_metaverse()
-        # print(resp)
-        # print(resp == goal_map)
+        create_megaverse_client = CreatemegaverseClient(api_client, goal_map)
+        return create_megaverse_client.create_megaverse()
     else:
-        print(f"Goal map does not exist. No metaverse created.")
+        print(f"Goal map does not exist. No megaverse created.")
 
 
 if __name__ == "__main__":
