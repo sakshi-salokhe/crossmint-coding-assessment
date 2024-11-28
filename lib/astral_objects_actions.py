@@ -2,7 +2,7 @@ class AstralObjectsActions:
     def __init__(self, api_client):
         self.api_client = api_client
 
-    def create_polyanet(self, row, column):
+    def create_polyanets(self, row, column):
         params = {
             'row': row,
             'column': column

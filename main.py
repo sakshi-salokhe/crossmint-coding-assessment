@@ -10,6 +10,8 @@ def main():
     if goal_map is not None:
         create_metaverse_client = CreateMetaverseClient(api_client, goal_map)
         return create_metaverse_client.create_metaverse()
+        # print(resp)
+        # print(resp == goal_map)
     else:
         print(f"Goal map does not exist. No metaverse created.")
 
